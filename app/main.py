@@ -12,7 +12,7 @@ logging.basicConfig(
 app = FastAPI(
     title="DocuMind",
     description="RAG Document Q&A System",
-    version="0.2.0",
+    version="0.3.0",
 )
 
 app.include_router(health.router)
