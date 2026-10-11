@@ -1,14 +1,22 @@
+import logging
+
 from fastapi import FastAPI
 
-from app.api import health
+from app.api import documents, health
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
 
 app = FastAPI(
     title="DocuMind",
     description="RAG Document Q&A System",
-    version="0.1.0",
+    version="0.2.0",
 )
 
 app.include_router(health.router)
+app.include_router(documents.router)
 
 
 @app.get("/")

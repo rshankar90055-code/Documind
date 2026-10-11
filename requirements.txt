@@ -1,3 +1,7 @@
 fastapi
 uvicorn[standard]
 python-dotenv
+python-multipart
+pypdf
+python-docx
+langchain-text-splitters
