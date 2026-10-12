@@ -1,3 +1,2 @@
 # DocuMind
-RAG-based Document Q&A system built with FastAPI, LangChain and FAISS.
-(Work in progress)
+RAG Document Q&A System | Python, FastAPI, FAISS, sentence-transformers, LangChain, Gemini API, Docker
