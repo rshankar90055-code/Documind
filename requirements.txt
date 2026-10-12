@@ -8,3 +8,4 @@ langchain-text-splitters
 sentence-transformers
 faiss-cpu
 numpy
+httpx
