@@ -1,0 +1,18 @@
+services:
+  documind:
+    build: .
+    container_name: documind
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # Inside a container, "localhost" is the container itself, not your laptop.
+      # This is only used if LLM_PROVIDER=ollama.
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+    volumes:
+      - documind-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  documind-data:
