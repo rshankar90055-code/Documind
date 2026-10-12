@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DocuMind</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Docu<span>Mind</span></h1>
+        <p>Ask questions about your documents</p>
+    </header>
+
+    <main class="layout">
+        <aside class="sidebar">
+            <h2>Documents</h2>
+            <label id="drop-zone" class="drop-zone" for="file-input">
+                <strong>Click to choose a file</strong>
+                <span>PDF, DOCX or TXT (or drag it here)</span>
+            </label>
+            <input id="file-input" type="file" accept=".pdf,.docx,.txt" hidden />
+            <p id="upload-status" class="status" role="status"></p>
+            <ul id="doc-list" class="doc-list"></ul>
+        </aside>
+
+        <section class="chat">
+            <div id="messages" class="messages">
+                <div class="empty" id="empty-state">Upload a document, then ask a question.</div>
+            </div>
+            <form id="ask-form" class="ask-form" autocomplete="off">
+                <input id="question" type="text" placeholder="Ask a question about your documents..." minlength="3"
+                    maxlength="1000" required />
+                <button id="ask-btn" type="submit">Ask</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

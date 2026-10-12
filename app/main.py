@@ -1,8 +1,11 @@
 import logging
 
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
-from app.api import ask,documents, health
+from app.api import ask, documents, health
+from app.core.config import FRONTEND_DIR
 
 logging.basicConfig(
     level=logging.INFO,
@@ -12,14 +15,16 @@ logging.basicConfig(
 app = FastAPI(
     title="DocuMind",
     description="RAG Document Q&A System",
-    version="0.3.0",
+    version="0.5.0",
 )
 
 app.include_router(health.router)
 app.include_router(documents.router)
 app.include_router(ask.router)
 
+app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
-@app.get("/")
+
+@app.get("/", include_in_schema=False)
 def root():
-    return {"message": "Welcome to DocuMind"}
+    return FileResponse(FRONTEND_DIR / "index.html")

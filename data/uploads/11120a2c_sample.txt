@@ -1,7 +1,0 @@
-Photosynthesis is the process by which green plants use sunlight, water and carbon dioxide to make glucose and release oxygen. It takes place in the chloroplasts, which contain the green pigment chlorophyll. Without it, most life on Earth could not survive.
-
-FastAPI is a modern Python web framework used to build APIs quickly. It uses type hints for automatic validation and generates interactive documentation. It runs on an ASGI server such as Uvicorn and is popular for machine learning backends.
-
-Cricket is a bat-and-ball game played between two teams of eleven players. A batter tries to score runs while the opposing team bowls and fields. A Test match can last up to five days, while a T20 match finishes in about three hours.
-
-The Taj Mahal is a white marble monument in Agra, India. It was built by the Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal. Construction was completed in the 17th century and it attracts millions of visitors every year.
